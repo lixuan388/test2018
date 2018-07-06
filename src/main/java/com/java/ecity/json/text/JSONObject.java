@@ -4,7 +4,6 @@ import java.util.Map;
 
 import org.json.JSONException;
 
-import com.java.ecity.json.text.JSONObject;
 
 public class JSONObject extends org.json.JSONObject {
 	public JSONObject()
@@ -12,7 +11,7 @@ public class JSONObject extends org.json.JSONObject {
 		super();
 	}
 	
-	public JSONObject(com.java.ecity.json.text.JSONTokener x)
+	public JSONObject(JSONTokener x)
 	{
 
 		this();

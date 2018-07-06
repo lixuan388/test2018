@@ -1,8 +1,10 @@
-package com.java.ecity.json;
+package com.java.ecity.json.text;
 
 import java.util.Map;
 
 import org.json.JSONException;
+
+import com.java.ecity.json.text.JSONObject;
 
 public class JSONObject extends org.json.JSONObject {
 	public JSONObject()
@@ -10,7 +12,7 @@ public class JSONObject extends org.json.JSONObject {
 		super();
 	}
 	
-	public JSONObject(com.java.ecity.json.JSONTokener x)
+	public JSONObject(com.java.ecity.json.text.JSONTokener x)
 	{
 
 		this();
@@ -123,6 +125,30 @@ public class JSONObject extends org.json.JSONObject {
 
 //        System.err.println("---putOnce end ---");
 		return this;
+	}
+
+	@Override
+	public JSONArray getJSONArray(String key) throws JSONException {
+		// TODO Auto-generated method stub
+        Object object = this.get(key);
+        if (object instanceof JSONArray) {
+            return (JSONArray) object;
+        }
+        throw new JSONException("JSONObject[" + quote(key)
+                + "] is not a JSONArray.");
+	}
+
+	@Override
+	public Object get(String key) throws JSONException {
+		// TODO Auto-generated method stub
+        if (key == null) {
+            throw new JSONException("Null key.");
+        }
+        Object object = this.opt(key);
+        if (object == null) {
+            throw new JSONException("JSONObject[" + quote(key) + "] not found.");
+        }
+        return object;
 	}
 	
 

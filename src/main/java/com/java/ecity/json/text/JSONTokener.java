@@ -1,6 +1,8 @@
-package com.java.ecity.json;
+package com.java.ecity.json.text;
 
 import org.json.JSONException;
+
+import com.java.ecity.json.text.JSONObject;
 
 public class JSONTokener extends org.json.JSONTokener {
 

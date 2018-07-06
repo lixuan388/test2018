@@ -14,6 +14,7 @@ public class JSONTokener extends org.json.JSONTokener {
 	@Override
 	public Object nextValue() throws JSONException {
 		// TODO Auto-generated method stub
+
         char c = this.nextClean();
         String string;
 

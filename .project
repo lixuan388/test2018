@@ -36,9 +36,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>WeiXinSDK</name>
+			<name>ECitySDK</name>
 			<type>2</type>
-			<location>D:/Web/workspace2/WeiXinSDK</location>
+			<location>D:/Web/workspace2018/ECitySDK/src/main/java</location>
 		</link>
 	</linkedResources>
 </projectDescription>

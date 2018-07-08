@@ -77,10 +77,16 @@ public class JSONObject extends org.json.JSONObject {
 
 	@Override
 	public String getString(String name) throws JSONException {
-		// TODO Auto-generated method stub
 		if (has(name))
 		{
-			return super.getString(name);
+	        Object value = this.get(name);        
+	        if (value instanceof String) {
+	            return (String) value;
+	        } else if (value != null) {
+	            return String.valueOf(value);
+	        }
+	        return "";
+	            
 		}
 		else
 		{
